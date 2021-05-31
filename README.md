@@ -7,7 +7,7 @@
 
 <br>
 
-![Screenshot GreasyFork](./img/instalki.jpg)
+![Screenshot](./img/instalki.jpg)
 
 ## License
 [CC-BY-SA-4.0](https://github.com/pabli24/instalki-dark/blob/main/LICENSE)
