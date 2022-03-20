@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name             instalki.pl - Ciemny Wygląd
 @description      Zmienia wygląd strony na ciemny
-@version          1.0.1
+@version          1.0.2
 @namespace        https://greasyfork.org/pl/users/124677-pabli
 @author           Pabli
 @license          CC-BY-NC-4.0
@@ -14,8 +14,11 @@
 @-moz-document url-prefix("https://www.instalki.pl") {
 if kafelki {
 	#top-left-content {
-		display: none!important;
+		display: none !important;
 	}
+}
+:root {
+	color-scheme: dark;
 }
 /* tekst */
 body, .more.moreactive, 
@@ -28,20 +31,20 @@ h2, h2 a, strong, #show_items .name a .version, .djcatalog_item .item_name_prog 
 	color: #e5e5e5;	
 }
 a:link, a:visited,
-#show_items .name a, .djcatalog_item .item_name_prog, .djcatalog_item .item_name_prog h1.name, .djcatalog_item .description_title .title_box, #download_mirrors .mirror_title, #right .djmod2.module_tab.prog_cat table.items_numerical a, a > strong {
+#show_items .name a, .djcatalog_item .item_name_prog, .djcatalog_item .item_name_prog h1.name, .djcatalog_item .description_title .title_box, #download_mirrors .mirror_title, #right .djmod2.module_tab.prog_cat table.items_numerical a, a > strong, .plista_widget_belowArticle .itemTitle {
 	color: #93b2ce;
 }
 a:link:hover, a:visited:hover,
-#show_items .name a:hover {
+#show_items .name a:hover, .plista_widget_belowArticle .itemTitle:hover {
 	color: #3688d4;
 }
 .cat_icon, .cat_icon a {
-	color: #fff!important;
+	color: #fff !important;
 }
 /* tlo */
 body, #top-left-content, #wrapper, #main, #content_in, .panel.active,
 #article_title, ul.mostread li, .banner_itemsc_center, .pagenavbar, iframe, .twoj_tabs_class3 {
-	background: #000!important;
+	background: #000 !important;
 }
 .more.moreactive {
 	background-color: #000;
@@ -61,7 +64,15 @@ div#pageBreakNavigation {
 	background: #000000;
 	border-top: 1px dotted #311a00;
 }
-/* top menu ciemniejsze */
+#award {
+	background: #000000;
+	border: 1px solid #000000;
+}
+/* top menu */
+#search_right #cse-search-box input#q {
+	color: #fff;
+	background: #444 !important;
+}
 #topmenu_2_outer, #topmenu_1 ul.menu li#current a, #topmenu_1 ul.menu li.active a,
 #topmenu_1 ul.menu #current, #topmenu_1 ul.menu .active, #topmenu_1 ul.menu li:hover {
 	background: #366978;
@@ -76,24 +87,24 @@ div#pageBreakNavigation {
 	color: #bbb;
 }
 /* menu glowne i inne */
-#right div.module_tab2 #twoj_container-2 ul.twoj_tablink.ui-tabs-nav, #right div.module_tab2 #twoj_container-4 ul.twoj_tablink.ui-tabs-nav, div.djmod2 h3, div.djmodprim h3 {
+#right div.module_tab2 #twoj_container-2 ul.twoj_tablink.ui-tabs-nav, #right div.module_tab2 #twoj_container-4 ul.twoj_tablink.ui-tabs-nav, div.djmod2 h3, div.djmodprim h3, .plista_widget_sidebar .plistaHeadline {
 	border-bottom: 3px solid #222; /* pasek pod menu glowne i innymi pomaranczowo-bialy  */
 }
-.module .primdjmod-content .menu li {
+.module .primdjmod-content .menu li, .plista_widget_sidebar .plistaList, .plista_widget_belowArticle .plistaList {
 	border-bottom: 1px solid #000;
 }
 #right .djmod2.module .mod-content, #right .djmod2.module .mod-content.gradient, div.djmodprim .primdjmod-content {
 	background: #0a0a0a;
 	border-top: 5px solid #000;
 }
-.module .primdjmod-content .menu a {
+.module .primdjmod-content .menu a, .plista_widget_sidebar .itemTitle {
 	color: #ccc;
 }
 .module .primdjmod-content .menu a:hover {
 	color: #ffffff;
 }
 .level0 > a > span[style="color: red;"] {
-	color: #ea7575!important; /* sklep z programami */
+	color: #ea7575 !important; /* sklep z programami */
 }
 /* prawa strona programy */
 #right div.module_tab2 #twoj_container-2 .twoj_tab_content .twoj_li_top, #right div.module_tab2 #twoj_container-4 .twoj_tab_content .twoj_li_top {
@@ -106,7 +117,7 @@ div#pageBreakNavigation {
 	border-bottom: 2px solid #0a0a0a;
 }
 #right div.module_tab2 #twoj_container-2 .twoj_tab_content .twoj_tab_content, #right div.module_tab2 #twoj_container-4 .twoj_tab_content .twoj_tab_content {
-	background: #0a0a0a!important;
+	background: #0a0a0a !important;
 }
 table.items_numerical a:link, table.items_numerical a:visited {
 	color: #ccc;
@@ -116,7 +127,7 @@ table.items_numerical a:link, table.items_numerical a:visited {
 }
 /* news podziel sie */
 .banner_article_comments > div > div {
-	background-color: #0a0a0a!important;
+	background-color: #0a0a0a !important;
 }
 /* news podobne tematy */
 #wrapper .rtih .rtih_bloc .rtih_entry .rtih_title, ul.latestnews li a:link, ul.latestnews li a:visited, ul.mostread li a:link, ul.mostread li a:visited {
@@ -149,7 +160,7 @@ table.items_numerical a:link, table.items_numerical a:visited {
 }
 #show_sort .links .active.ord_asc,
 #show_sort .links .active, #show_sort .links .normal:hover{
-	background: #222!important;
+	background: #222 !important;
 }
 #show_sort .links .active {
 	padding-left: 25px;
@@ -167,7 +178,7 @@ table.items_numerical a:link, table.items_numerical a:visited {
 	background: #111;
 }
 .djcatalog_item .description_title #djcat_content_rm.content_rm {
-	background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0,rgb(0, 0, 0) 75%)!important;
+	background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0,rgb(0, 0, 0) 75%) !important;
 }
 .djcatalog_item .images_slider .islider_outer {
 	border-left: 40px solid #000;
@@ -217,5 +228,47 @@ div.comment_box1 {
 }
 .item_comments .comments_title {
 	border-bottom: 3px solid #262626;
+}
+}
+@-moz-document url-prefix("https://disqus.com/embed/comments/?base=default&f=instalkipl") {
+body {
+	color: #d2d8d8;
+	background: #000;
+}
+.tab-conversation.active>a {
+	color: #d2d8d8 !important;
+}
+.nav-primary {
+	border-bottom: 2px solid #171718;
+}
+.vote-down {
+	border-left: 2px solid #181819;
+}
+.post-content .post-menu .dropdown-toggle {
+	border-color: #181819;
+}
+.disqus-footer__wrapper {
+	border-top: 2px solid #181819;
+}
+.caret {
+	border-top: 4px solid #fff;
+}
+.discovery-col-header h2,
+.discovery-post .meta,
+.discovery-post .top-comment .user {
+	color: rgba(92, 158, 197, 0.8);
+}
+.discovery-col-header h2 strong {
+	color: #d3bebe;
+}
+.discovery-post .top-comment p {
+	color: #9ca6ac;
+}
+.publisher-anchor-color a,
+.comment__footer .author, .comment__header .author {
+	color: #eee !important;
+}
+.post-votes .post-votes__separator {
+	border-right: 2px solid #000000;
 }
 }
